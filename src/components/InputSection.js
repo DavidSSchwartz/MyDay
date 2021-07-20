@@ -15,16 +15,16 @@ const InputSection = ( props )  => {
                         <input type='text' value={value} onChange = {handleChange}></input> :
                         <textarea value={value} onChange = {handleChange}></textarea>
                     );
-
+    const deleteEntry = () => setValue('');
     return (
         <div>
             <label>
                 {data.title}
             </label>
             {Input}
-            <span>
-                
-            </span>
+            <button onClick={deleteEntry}>
+                x
+            </button>
         </div>
     )
 }
