@@ -1,11 +1,13 @@
 import React from 'react';
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 
 const Layout = ({ children }) => {
     return (
         <>
-        <main>
-            {children}
+        <main className='container mx-auto flex justify-center my-16 font-body'>
+            <div className='flex flex-col items-center p-8 bg-oldlace'>
+                {children}
+            </div>
         </main>
         </>
     )
