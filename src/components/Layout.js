@@ -5,7 +5,7 @@ const Layout = ({ children }) => {
     return (
         <>
         <main className='container mx-auto flex justify-center my-16 font-body'>
-            <div className='flex flex-col items-center p-8 bg-oldlace'>
+            <div className='flex flex-col items-center p-8 bg-oldlace text-purp'>
                 {children}
             </div>
         </main>

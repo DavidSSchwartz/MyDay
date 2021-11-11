@@ -13,14 +13,14 @@ const Body = () => {
             return <InputSection key={index} data={data}></InputSection>
     });
     return (
-        <div className='w-full'>
-            <div>
+        <div className='w-full pt-4'>
+            <div className='text-right'>
                 <ClearAll />
             </div>
-            <div className='flex flex-col flex-wrap h-1/4'>
+            <div className='grid grid-cols-2 grid-rows-3 grid-flow-col gap-x-4 h-1/4'>
                 {smallInputs}
             </div>
-            <div>
+            <div className='pt-4'>
                 {largeInputs}
             </div>
         </div>
