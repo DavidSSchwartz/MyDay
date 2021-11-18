@@ -7,7 +7,6 @@ const InputSection = ( props )  => {
     const data = props.data
     const storageKey = data.title ? data.title : data.subtitle;
 
-    const [ displayCancel, setDisplayCancel ] = useState(false);
     const [ value, setValue ] = useStateWithLocalStorage(
         storageKey
     );
@@ -16,21 +15,15 @@ const InputSection = ( props )  => {
 
     const Input = (data.type === 'small' ?
                         <input className='w-full bg-wheat rounded-xl py-2 px-3.5' type='text' value={value} onChange = {handleChange}></input> :
-                        <textarea className='w-full border-4 border-wheat bg-oldlace rounded-xl py-2 px-3.5' value={value} onChange = {handleChange}></textarea>
+                        <textarea className='w-full border-4 border-wheat bg-oldlace rounded-xl py-2 px-3.5 h-32' value={value} onChange = {handleChange}></textarea>
                     );
     const deleteEntry = () => setValue('');
 
-    const handleMouseOver = () => {
-        setDisplayCancel(true);
-    }
-
-    const handleMouseOut = () => {
-        setDisplayCancel(false);
-    }
+    const xPlacement = data.type === 'small' ? 'right-0 inset-y-0' : 'top-2 right-1.5';
 
     return (
         <div className='flex flex-col pt-4'>
-            <label className='h-6'>
+            <label className='h-6 leading-tight'>
                 {data.title}
             </label>
             <div className='relative'>
@@ -38,7 +31,7 @@ const InputSection = ( props )  => {
                 {   
                     value
                     &&
-                    <button className='absolute -right-0 px-1.5 inset-y-0 leading-zero rounded-r-xl' onClick={deleteEntry}>
+                    <button className={`absolute ${xPlacement} px-1.5 leading-zero rounded-r-xl`} onClick={deleteEntry}>
                         <FontAwesomeIcon icon={faTimes} />
                     </button> 
                 }
@@ -48,12 +41,3 @@ const InputSection = ( props )  => {
 }
 
 export default InputSection;
-// display: grid;
-// grid-auto-flow: column;
-// grid-template-columns: 1fr 1fr;
-// grid-template-rows: 1fr 1fr 1fr;
-// column-gap: 1
-// rem
-// ;
-// row-gap: 1
-// rem;
