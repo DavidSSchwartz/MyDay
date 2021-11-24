@@ -4,11 +4,9 @@ import PropTypes from 'prop-types';
 const Layout = ({ children }) => {
     return (
         <>
-        <main className='lg:container mx-auto flex justify-center my-16 font-body'>
-            <div className='flex flex-col items-center p-8 bg-oldlace text-purp sm:w-8/12 h-full'>
+            <div className='grid grid-cols-main'>
                 {children}
             </div>
-        </main>
         </>
     )
 }

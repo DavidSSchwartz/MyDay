@@ -3,14 +3,15 @@ import { hot } from "react-hot-loader";
 import "./styles/App.css";
 import "./components/Layout";
 import Layout from "./components/Layout";
-import Title from './components/Title';
 import Body from './components/Body';
+import SideBarRight from './components/SideBarRight';
 
 const App = () => {
     return(
       <Layout>
-        <Title title="I'm grateful for..."></Title>
+        <div></div>
         <Body></Body>
+        <SideBarRight></SideBarRight>
       </Layout>
     );
 }
