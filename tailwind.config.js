@@ -26,16 +26,16 @@ module.exports = {
       gridTemplateColumns: {
         'main': '1fr 80% 1fr',
       },
-      backgroundImage: {
-        'blue': "url('/src/assets/blue.jpg')",
-        'brown-paper': "url('/src/assets/brown-paper.jpg')",
-        'clouds': "url('/src/assets/clouds.jpg')",
-        'mountain-valley': "url('/src/assets/mountain-valley.jpg')",
-        'ocean': "url('/src/assets/ocean.jpg')",
-        'starry-sky': "url('/src/assets/starry-sky.jpg')",
-        'white-texture': "url('/src/assets/white-texture.jpg')",
-        'wood': "url('/src/assets/wood.jpg')",
-      },
+      backgroundImage: theme => ({
+        'blue': "url('/assets/blue.jpg')",
+        'brown-paper': "url('/assets/brown-paper.jpg')",
+        'clouds': "url('/assets/clouds.jpg')",
+        'mountain-valley': "url('/assets/mountain-valley.jpg')",
+        'ocean': "url('/assets/ocean.jpg')",
+        'starry-sky': "url('/assets/starry-sky.jpg')",
+        'white-texture': "url('/assets/white-texture.jpg')",
+        'wood': "url('/assets/wood.jpg')",
+      }),
       keyframes: {
         slideInRight: {
           '0%': { right: '-12rem' },

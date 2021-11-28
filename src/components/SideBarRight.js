@@ -6,25 +6,32 @@ import { faImages } from '@fortawesome/free-regular-svg-icons';
 import { Transition } from '@headlessui/react'
 
 const SideBarRight = () => {
-    const [displayToolTip, setDisplayToolTip] = useState(false);
+    const [displaySideBar, setDisplaySideBar] = useState(false);
     const handleClick = () => {
-        setDisplayToolTip(!displayToolTip)
+        setDisplaySideBar(true)
     }
     const hideToolTip = () => {
-        setDisplayToolTip(false);
+        setDisplaySideBar(false);
     }
     return (
         <div className='fixed right-0 top-20'>
             <div className='relative'>
                 <button 
-                    className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-l-sm' 
+                    className='bg-blue-500 
+                                hover:bg-blue-700 
+                                text-white 
+                                font-bold 
+                                py-2 
+                                px-4 
+                                rounded-l-sm' 
                     onClick={handleClick}
+                    title='Choose background'
                 >
                     <FontAwesomeIcon icon={faImages} />
                 </button>
                 <Transition
                     className='absolute right-0 top-0 shadow-lg bg-white'
-                    show={displayToolTip}
+                    show={displaySideBar}
                     enter='transform transition duration-200'
                     enterFrom='translate-x-full'
                     enterTo='-translate-x-0'
