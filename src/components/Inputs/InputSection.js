@@ -1,9 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React, { useContext } from 'react';
 import useStateWithLocalStorage from '../../helpers/state-helpers';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
+import { ColorPaletteContext } from '../Layout';
 
 const InputSection = ( props )  => {
+    const CPContext = useContext(ColorPaletteContext);
+    const palette = JSON.parse(CPContext.colorPalette);
     const data = props.data
     const storageKey = data.title ? data.title : data.subtitle;
 
@@ -14,8 +17,8 @@ const InputSection = ( props )  => {
     const handleChange = ev => setValue(ev.target.value);
 
     const Input = (data.type === 'small' ?
-                        <input className='w-full bg-wheat rounded-xl py-2 px-3.5' type='text' value={value} onChange = {handleChange}></input> :
-                        <textarea className='w-full border-4 border-wheat bg-oldlace rounded-xl py-2 px-3.5 h-32' value={value} onChange = {handleChange}></textarea>
+                        <input className={`w-full bg-${palette.inputBg} rounded-xl py-2 px-3.5`} type='text' value={value} onChange = {handleChange}></input> :
+                        <textarea className={`w-full border-4 border-${palette.inputBg} bg-${palette.background} rounded-xl py-2 px-3.5 h-32`} value={value} onChange = {handleChange}></textarea>
                     );
     const deleteEntry = () => setValue('');
 

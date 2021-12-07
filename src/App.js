@@ -4,7 +4,7 @@ import "./styles/App.css";
 import "./components/Layout";
 import Layout from "./components/Layout";
 import Body from './components/Body';
-import SideBarRight from './components/SideBarRight';
+import SideBarRight from './components/SideBars/SideBarRight';
 
 const App = () => {
     return(

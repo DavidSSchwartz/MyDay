@@ -19,6 +19,15 @@ module.exports = {
         purp: {
           DEFAULT: '#635585',
         },
+        darkblue: {
+          DEFAULT: '#1013b7'
+        },
+        pink: {
+          DEFAULT: '#E41376'
+        },
+        lightblue: {
+          DEFAULT:  '#01c8EE'
+        },
       },
       lineHeight: {
         'zero': '0',
