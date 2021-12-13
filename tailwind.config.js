@@ -28,6 +28,42 @@ module.exports = {
         lightblue: {
           DEFAULT:  '#01c8EE'
         },
+        gainsboro: {
+          DEFAULT: '#DDE5E7'
+        },
+        indianred: {
+          DEFAULT: '#d4674c'
+        },
+        dimgray: {
+          DEFAULT: '#67727E'
+        },
+        khaki: {
+          DEFAULT: '#FDEA79'
+        },
+        darkkhaki: {
+          DEFAULT: '#A8A355'
+        },
+        darkslategray: {
+          DEFAULT: '#4f4039'
+        },
+        whitesmoke: {
+          DEFAULT: '#F6F0F0'
+        },
+        mediumturquoise: {
+          DEFAULT: '#60E3D5'
+        },
+        darkcyan: {
+          DEFAULT: '#0567A8'
+        },
+        burlywood: {
+          DEFAULT: '#ffe196'
+        },
+        silverrose: {
+          DEFAULT: '#f0b5d1'
+        },
+        steelblue: {
+          DEFAULT: '#1878b6'
+        }
       },
       lineHeight: {
         'zero': '0',

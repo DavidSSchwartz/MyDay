@@ -14,6 +14,26 @@ const ColorPalettes = () => {
             'pink',
             'lightblue'
         ],
+        [
+            'indianred',
+            'gainsboro',
+            'dimgray'
+        ],
+        [
+            'darkkhaki',
+            'khaki',
+            'darkslategray'
+        ],
+        [
+            'whitesmoke',
+            'darkcyan',
+            'mediumturquoise'
+        ],
+        [
+            'silverrose',
+            'steelblue',
+            'burlywood'
+        ]
     ]
 
     const displayPalettes = palettes.map((palette, key) => {
