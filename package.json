@@ -20,7 +20,6 @@
     "css-loader": "^1.0.1",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^4.5.2",
-    "offline-plugin": "^5.0.7",
     "postcss": "^8.3.5",
     "postcss-loader": "^4.3.0",
     "style-loader": "^0.23.1",
