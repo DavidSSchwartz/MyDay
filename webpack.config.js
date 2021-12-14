@@ -1,5 +1,6 @@
 const path = require("path");
 const webpack = require("webpack");
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: "./src/index.js",
@@ -18,7 +19,14 @@ module.exports = {
       },
       {
         test: /\.(png|jpe?g|gif)$/i,
-        use:[{ loader: 'file-loader', },],
+        use:[{ 
+          loader: 'file-loader',         
+          options: {
+            name: '[name].[ext]',
+            outputPath: 'assets',
+          },
+        },
+        ],
       }
     ]
   },
@@ -29,10 +37,18 @@ module.exports = {
     filename: "bundle.js"
   },
   devServer: {
-    contentBase: path.join(__dirname, "public/"),
+    contentBase: path.join(__dirname, "dist/"),
     port: 3000,
     publicPath: "http://localhost:3000/dist/",
     hotOnly: true
   },
-  plugins: [new webpack.HotModuleReplacementPlugin()]
+  plugins: [
+    new webpack.HotModuleReplacementPlugin(),
+    new HtmlWebpackPlugin({
+      // injects bundle.js to our new index.html
+      inject: true,
+      // copys the content of the existing index.html to the new /build index.html
+      template:  path.resolve('./public/index.html'),
+    }),
+  ]
 };
