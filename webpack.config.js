@@ -1,6 +1,7 @@
 const path = require("path");
 const webpack = require("webpack");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+var OfflinePlugin = require('offline-plugin');
 
 module.exports = {
   entry: "./src/index.js",
@@ -51,5 +52,6 @@ module.exports = {
       // copys the content of the existing index.html to the new /build index.html
       template:  path.resolve('./public/index.html'),
     }),
+    new OfflinePlugin(),
   ]
 };
