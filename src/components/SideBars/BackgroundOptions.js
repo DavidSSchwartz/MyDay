@@ -24,7 +24,8 @@ const BackgroundOptions = () => {
                                         <img className='h-14 w-14' src={image.default} title={imageNames[key]}/>
                                     </button>
                                 )
-                            })
+                            });
+                            
     return (
         <div className='flex gap-4 flex-wrap justify-center p-4 w-40'>
             <button className='h-14 w-14 bg-white shadow' onClick={() => setBackgroundImage('')} title='none'></button>
