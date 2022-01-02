@@ -22,9 +22,9 @@ module.exports = {
         use:[{ 
           loader: 'file-loader',         
           options: {
-            name: 'untitled.png',
+            name: '[name].[ext]',
             outputPath: 'assets',
-            context: 'public/assets',
+            context: 'dist/assets',
           },
         },
         ],
