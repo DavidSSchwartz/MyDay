@@ -22,7 +22,7 @@ module.exports = {
         use:[{ 
           loader: 'file-loader',         
           options: {
-            name: '[name].[ext]',
+            name: 'untitled.png',
             outputPath: 'assets',
             context: 'public/assets',
           },
@@ -34,7 +34,7 @@ module.exports = {
   resolve: { extensions: ["*", ".js", ".jsx"] },
   output: {
     path: path.resolve(__dirname, "dist/"),
-    publicPath: "./dist/",
+    publicPath: "/dist/",
     filename: "bundle.js"
   },
   devServer: {
