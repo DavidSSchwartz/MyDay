@@ -34,7 +34,6 @@ module.exports = {
   resolve: { extensions: ["*", ".js", ".jsx"] },
   output: {
     path: path.resolve(__dirname, "./dist"),
-    publicPath: "/dist/",
     filename: "bundle.js"
   },
   devServer: {
@@ -50,6 +49,7 @@ module.exports = {
       inject: true,
       // copys the content of the existing index.html to the new /build index.html
       template:  path.resolve('./public/index.html'),
+      publicPath: "/dist/",
     }),
   ]
 };
