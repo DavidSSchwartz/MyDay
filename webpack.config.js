@@ -25,7 +25,7 @@ module.exports = {
           options: {
             name: '[name].[ext]',
             outputPath: 'assets',
-            context: 'dist/assets',
+            context: 'dist',
           },
         },
         ],
@@ -52,13 +52,13 @@ module.exports = {
       template:  path.resolve('./public/index.html'),
       publicPath: "/dist/",
     }),
-    new CopyPlugin({
-      patterns: [
-          {
-              from: path.resolve(__dirname, 'public/assets'),
-              to: path.resolve(__dirname, 'dist/assets')
-          }
-      ]
-  }),
+  //   new CopyPlugin({
+  //     patterns: [
+  //         {
+  //             from: path.resolve(__dirname, 'public/assets'),
+  //             to: path.resolve(__dirname, 'dist/assets')
+  //         }
+  //     ]
+  // }),
   ]
 };
