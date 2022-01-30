@@ -56,7 +56,7 @@ module.exports = {
       patterns: [
           {
               from: path.resolve(__dirname, 'public/assets'),
-              to: path.resolve(__dirname, 'dist')
+              to: path.resolve(__dirname, 'dist/assets')
           }
       ]
   }),
